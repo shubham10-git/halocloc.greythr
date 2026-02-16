@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sign in – Secure Portal</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f3f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    background: #fff;
+    width: 380px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  h2 {
+    font-weight: normal;
+    margin-bottom: 5px;
+  }
+
+  .subtitle {
+    color: #5f6368;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #1a73e8;
+  }
+
+  .link {
+    color: #1a73e8;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  button {
+    background: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #1669c1;
+  }
+
+  .awareness {
+    display: none;
+    text-align: center;
+  }
+
+  ul {
+    text-align: left;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container" id="login">
+  <h2>Sign in</h2>
+  <div class="subtitle">Use your work email to continue</div>
+
+  <input type="email" placeholder="Email address" />
+
+  <div class="link">Forgot email?</div>
+
+  <div class="actions">
+    <div class="link">Create account</div>
+    <button onclick="showAwareness()">Next</button>
+  </div>
+</div>
+
+<div class="container awareness" id="awareness">
+  <h2>🎯 Security Awareness Test</h2>
+  <p><strong>You clicked a sign-in link from an email.</strong></p>
+
+  <p>
+    This was a simulated security awareness exercise.  
+    No credentials were requested or collected.
+  </p>
+
+  <h4>Remember:</h4>
+  <ul>
+    <li>Verify links before clicking</li>
+    <li>Check sender and domain carefully</li>
+    <li>Avoid signing in from email links</li>
+    <li>Report suspicious emails</li>
+  </ul>
+
+  <p><strong>Thank you for staying secure.</strong></p>
+</div>
+
+<script>
+function showAwareness() {
+  document.getElementById("login").style.display = "none";
+  document.getElementById("awareness").style.display = "block";
+}
+</script>
+
+</body>
+</html>
